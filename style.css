@@ -1,0 +1,22 @@
+.jumbotron{
+  background-color: #c5ebc3;
+}
+.centimg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+}
+.lnimg{
+  max-width: 100%;
+  height: auto;
+}
+.centre{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+}
