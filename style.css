@@ -1,14 +1,15 @@
-.jumbotron{
-  background-color: #c5ebc3;
-}
 img{
   max-width: 100%;
   height: auto;
+}
+.navbar{
+   background-color: #88d498;
 }
 .centimg{
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 .centre{
