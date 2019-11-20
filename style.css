@@ -7,10 +7,8 @@ img{
 }
 .centimg{
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin:20px auto;
+  scale:auto;
 }
 .centre{
   display: block;
@@ -18,4 +16,11 @@ img{
   margin-right: auto;
   max-width: 100%;
   height: auto;
+}
+h2{
+  margin:0% 9%
+}
+p{
+  margin:0% 10%;
+  text-align: justify;
 }
