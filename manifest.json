@@ -1,0 +1,19 @@
+{
+  "short_name": "EcoLiving",
+  "name": "Eco-Living”,
+  "start_url": "index.html",
+  "scope" : "./",
+  "icons": [
+          {
+              "src": "./images/logo192.png",
+              "sizes": "192x192",
+              "type": "image/png"
+            },
+            {
+              "src": "./images/logo512.png",
+              "sizes": "512x512",
+              "type": "image/png"
+            }
+          ],
+  "display": "standalone"
+}
