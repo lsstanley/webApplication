@@ -6,6 +6,7 @@ fetch("https://raw.githubusercontent.com/lsstanley/webApplication/temp/concepts/
   .then((resp)=>resp.json())
   .then(json => console.log(json))
   .then(function(data){
+    consol.log(data);
      let info=data.recipe;
     return info.map(function(info){
     let li=document.createElement(li);
