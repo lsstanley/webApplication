@@ -1,5 +1,5 @@
 {
-  "recipe" ["recipe1":{
+  "recipe": ["recipe1":{
       "recipename": "recipe1",
       "picture": "recipe1.png",
       "Ingredients": "Ingredients1",
