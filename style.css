@@ -18,9 +18,25 @@ img{
   height: auto;
 }
 h2{
-  margin:0% 9%
+  margin:0% 3%
 }
 p{
-  margin:0% 10%;
+  margin:0% 3%;
   text-align: justify;
+}
+.infoImageMain{
+  position: relative;
+  max-width: auto;
+  max-height: auto;
+  margin:0 auto;
+}
+.infoImageMain .content{
+  position: absolute; /* Position the background text */
+  top:0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+
 }

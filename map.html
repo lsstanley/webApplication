@@ -1,0 +1,84 @@
+<html>
+    <head>
+
+<style type="text/css">
+  html { height: 100% }
+  body { height: 100%; margin: 0; padding: 0 }
+  #map_canvas { height: 100% }
+</style>
+<script type="text/javascript"
+  src=
+"https://maps.googleapis.com/maps/api/js?key=AIzaSyC4Yinl8t5os1tyU8e2u7127MJh5ePxVlk&callback=initMap">
+</script>
+<script type="text/javascript">
+
+var locations = [
+['Dundee Resource And reuse Centre',  56.462698,-2.985134 ],
+['The Health Store Dundee', 56.462355,-2.970028 ],
+['Tayside Re-Users',  56.462535,-2.985564 ],
+['Sense Scotland',  56.474699,-2.980316 ],
+['Little Green Larder',  56.4559,-2.9923 ],
+['Transform Furniture Store', 56.464812,-2.970830 ]
+];
+
+  function initMap() {
+
+    var myOptions = {
+      center: new google.maps.LatLng(56.462002, -2.970700),
+      zoom: 13,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+
+    };
+    var map = new google.maps.Map(document.getElementById("default"),
+        myOptions);
+
+    setMarkers(map,locations)
+
+
+
+
+
+  function setMarkers(map,locations){
+
+      var marker, i
+
+for (i = 0; i < locations.length; i++)
+ {
+
+ var name = locations[i][0]
+ var lat = locations[i][1]
+ var long = locations[i][2]
+
+
+ latlngset = new google.maps.LatLng(lat, long);
+
+  var marker = new google.maps.Marker({
+          map: map, title: name , position: latlngset
+        });
+        map.setCenter(marker.getPosition())
+
+
+        var content = name +  '</h3>'
+
+  var infowindow = new google.maps.InfoWindow()
+
+google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
+        return function() {
+           infowindow.setContent(content);
+           infowindow.open(map,marker);
+        };
+    })(marker,content,infowindow));
+
+  }
+  }
+
+}
+
+
+
+  </script>
+ </head>
+ <body onload="initMap()">
+  <div id="default" style="width:100%; height:100%"></div>
+ </body>
+  </html>

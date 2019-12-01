@@ -1,36 +1,19 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
+  <title>take 2</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <linkrel="manifest"href="manifest.json">
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js').then(function(registration) {
-          // Registration was successful
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }, function(err) {
-          // registration failed :(
-          console.log('ServiceWorker registration failed: ', err);
-        });
-      });
-    }
-  </script>
-
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../concepts/recipe.css">
 </head>
 
 <body>
-  <!-- nav bar -->
   <nav class="navbar sticky-top navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="index.html">
-      <img src="./images/logo192.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      <img src="https://picsum.photos/30/30" width="30" height="30" class="d-inline-block align-top" alt="">
       EcoLiving
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,34 +25,44 @@
       </div>
     </div>
   </nav>
+  <main>
 
-  <main role="main" class="container">
-    <div>
-      <div class="infoImageMain">
-        <img class="centimg" src="https://picsum.photos/800/800">
-        <div class="content">
-          <h1>Eco-Living</h1>
-          <p>Your zero waste living guide in Dundee!</p>
+    <div class="container ">
+      <div class="row buttons">
+        <div class="col"></div>
+        <button class="col btn btn-success" type="button" name="button" onClick="changeLastRecipe()">Previous</button>
+        <div class="col"></div>
+        <button class="col btn btn-success" type="button" name="button" onClick="changeNextRecipe()">Next</button>
+        <div class="col"></div>
+      </div>
+    </div>
+    <div class="container">
+
+      <div class="container">
+        <div class="container">
+          <img class="container reciPic" src="https://picsum.photos/1000" alt="image">
+          <div class="row"></div>
         </div>
       </div>
-
+    </div>
+    <div class="container ">
       <div class="row">
-        <div class="col">
-          <img src="https://picsum.photos/600/500">
-        </div>
-        <div class="col">
-          <img src="https://picsum.photos/600/500">
-        </div>
-        <div class="col">
-          <img src="https://picsum.photos/600/500">
-        </div>
+        <div class="col"></div>
+        <button class="col btn btn-success" type="button" name="button" onClick="changeIngredients()">Ingredients</button>
+        <div class="col"></div>
+        <button class="col btn btn-success" type="button" name="button" onClick="changeMethod()">method</button>
+        <div class="col"></div>
       </div>
-
+      <div class="container">
+        <ul id="texty"></ul>
+      </div>
     </div>
   </main>
+  <script src="../concepts/scripts/recipe.js" charset="utf-8"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
