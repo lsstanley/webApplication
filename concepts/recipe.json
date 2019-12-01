@@ -1,39 +1,40 @@
-{
-  "recipe": ["recipe1":{
+{"results":
+  "recipes": [
+    "recipe1": {
       "recipename": "recipe1",
       "picture": "recipe1.png",
       "Ingredients": "Ingredients1",
       "method": "method1"
     },
-    "recipe2":{
+    "recipe2": {
       "recipename": "recipe2",
       "picture": "recipe2.png",
       "Ingredients": "Ingredients2",
       "method": "method2"
     },
-    "recipe3":{
+    "recipe3": {
       "recipename": "recipe3",
       "picture": "recipe3.png",
       "Ingredients": "Ingredients3",
       "method": "method3"
     },
-    "recipe4":{
+    "recipe4": {
       "recipename": "recipe4",
       "picture": "recipe4.png",
       "Ingredients": "Ingredients4",
       "method": "method4"
     },
-    "recipe5":{
-        "recipename": "recipe5",
-        "picture": "recipe5.png",
-        "Ingredients": "Ingredients5",
-        "method": "method5"
-      },
-      "recipe6":{
-        "recipename": "recipe6",
-        "picture": "recipe6.png",
-        "Ingredients": "Ingredients6",
-        "method": "method6"
-      },
-    ]
-  }
+    "recipe5": {
+      "recipename": "recipe5",
+      "picture": "recipe5.png",
+      "Ingredients": "Ingredients5",
+      "method": "method5"
+    },
+    "recipe6": {
+      "recipename": "recipe6",
+      "picture": "recipe6.png",
+      "Ingredients": "Ingredients6",
+      "method": "method6"
+    },
+  ]
+}
