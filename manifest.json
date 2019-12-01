@@ -1,6 +1,6 @@
 {
   "short_name": "EcoLiving",
-  "name": "Eco-Living”,
+  "name": "Eco-Living Web Application”,
   "start_url": "index.html",
   "scope" : "./",
   "icons": [
