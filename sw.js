@@ -4,7 +4,14 @@ var urlsToCache = [
   './',
   './index.html',
   './manifest.json',
-  './bootstrap.css'
+  './style.css',
+  './images',
+  './images/logo.png',
+  './images/logo192.png',
+  './images/logo512.png',
+  './charities.html',
+  './map.html',
+  'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
 ];
 
 self.addEventListener('install', function(event) {
