@@ -1,8 +1,8 @@
 var recipeName=[];
 var recipeDescription=[];
 var recipePic=[];
-var recipeMethod=[];
-var recipeIngredients=[];
+var recipeMethod=[][];
+var recipeIngredients=[][];
 var counter=0;
 var text=document.getElementById("ingredients/method");
 var title=document.getElementById("title");
@@ -11,7 +11,7 @@ let P=document.createElement('p');
 let T=document.createElement('H1');
 let D=document.createElement('p');
 
-fetch("https://raw.githubusercontent.com/lsstanley/webApplication/temp/concepts/recipe.json")
+fetch("https://raw.githubusercontent.com/lsstanley/webApplication/jacks_dev/recipe.json")
   .then((resp)=>resp.json())
   .then(function(data){
     console.log(data);
@@ -25,7 +25,7 @@ fetch("https://raw.githubusercontent.com/lsstanley/webApplication/temp/concepts/
     counter++;
     P.innerHTML=recipeMethod[0];
     T.innerHTML=recipeName[0];
-    D.innerHTML-recipeDescription[0];
+    D.innerHTML=recipeDescription[0];
     desc.appendChild(D);
     text.appendChild(P);
     title.appendChild(T);
@@ -36,7 +36,7 @@ fetch("https://raw.githubusercontent.com/lsstanley/webApplication/temp/concepts/
 });
 
 function changeNextRecipe(){
-  if (counter<5){
+  if (counter<recipeName.length){
     counter++
   }
   else{
@@ -49,11 +49,11 @@ function changeNextRecipe(){
 
 }
 function changeLastRecipe(){
-  if (counter!=0){
-    counter--
+  if (counter!==0){
+    counter--;
   }
   else{
-    counter=5;
+    counter=recipeName.length;
   }
   P.innerHTML=recipeIngredients[counter];
   T.innerHTML=recipeName[counter];
