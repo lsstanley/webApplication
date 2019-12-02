@@ -1,13 +1,12 @@
 var recipeName=[];
 var recipeDescription=[];
 var recipePic=[];
-var recipeMethod=[][];
-var recipeIngredients=[][];
+var recipeMethod=[];
+var recipeIngredients=[];
 var counter=0;
-var text=document.getElementById("ingredients/method");
+var ul=document.getElementById("ingredients/method");
 var title=document.getElementById("title");
-var desc=document.getElementById("desc");
-let P=document.createElement('p');
+var desc=document.getElementById("decription");
 let T=document.createElement('H1');
 let D=document.createElement('p');
 
@@ -17,17 +16,24 @@ fetch("https://raw.githubusercontent.com/lsstanley/webApplication/jacks_dev/reci
     console.log(data);
      let info=data.recipes;
     return info.map(function(recipe){
+    recipeIngredients[counter]=[];
+    recipeMethod[counter]=[];
     recipeName[counter]=`${recipe.recipename}`;
     recipeDescription[counter]=`${recipe.desc}`;
     recipePic[counter]=`${recipe.picture}`;
-    recipeMethod[counter]=`${recipe.method}`;
     recipeIngredients[counter]=`${recipe.Ingredients}`;
+    recipeMethod[counter]=`${recipe.Method}`;
+    //for (var i = 0; i < recipeIngredients[0].length ; i++) {
+    if(counter==0){
+      let Li=document.createElement('li');
+      Li.innerHTML=recipeIngredients[counter];
+      ul.appendChild(Li);
+    }
+    //}
     counter++;
-    P.innerHTML=recipeMethod[0];
     T.innerHTML=recipeName[0];
     D.innerHTML=recipeDescription[0];
     desc.appendChild(D);
-    text.appendChild(P);
     title.appendChild(T);
   })
 })
@@ -42,9 +48,14 @@ function changeNextRecipe(){
   else{
     counter=0;
   }
-  P.innerHTML=recipeIngredients[counter];
+  //for (var i = 0; i < recipeIngredients[counter].length; i++) {
+    let Li=document.createElement('li');
+    Li.innerHTML=recipeIngredients[counter];
+    ul.appendChild(Li);
+  //}
+
   T.innerHTML=recipeName[counter];
-  text.appendChild(P);
+
   title.appendChild(T);
 
 }
@@ -55,17 +66,26 @@ function changeLastRecipe(){
   else{
     counter=recipeName.length;
   }
-  P.innerHTML=recipeIngredients[counter];
+  //for (var i = 0; i < recipeIngredients[counter].length; i++) {
+    let Li=document.createElement('li');
+    Li.innerHTML=recipeIngredients[counter];
+    ul.appendChild(Li);
+  //}
   T.innerHTML=recipeName[counter];
-  text.appendChild(P);
   title.appendChild(T);
 
 }
 function changeMethod(){
-  P.innerHTML=recipeMethod[counter];
-  text.appendChild(P);
+  //for (var i = 0; i < recipeMethod[0].length ; i++) {
+    let Li=document.createElement('li');
+    Li.innerHTML=recipeMethod[counter];
+    ul.appendChild(Li);
+  //}
 }
 function changeIngredients(){
-  P.innerHTML=recipeIngredients[counter];
-  text.appendChild(P);
+  //for (var i = 0; i < recipeIngredients[0].length ; i++) {
+    let Li=document.createElement('li');
+    Li.innerHTML=recipeIngredients[counter];
+    ul.appendChild(Li);
+  //}
 }
