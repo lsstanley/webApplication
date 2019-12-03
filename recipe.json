@@ -2,7 +2,7 @@
   "recipes": [{
       "recipename": "Sweet Potato and Chick Pea Curry Bag",
       "desc": "Serves 2",
-      "picture": "images\sweetCurry.png",
+      "picture": "images/sweetCurry.png",
       "Ingredients":[ "2 – 3 cloves of garlic",
       "2 tbsp curry paste",
       "1 tsp curry powder",
@@ -23,7 +23,7 @@
     {
       "recipename": "Garlic, chilli, veg + noodle stir fry",
       "desc": "Serves 2",
-      "picture": "images\stirfry.png",
+      "picture": "images/stirfry.png",
       "Ingredients": ["2 – 4 cloves of garlic",
       "1 chilli",
       "2 noodle nests",
@@ -42,7 +42,7 @@
     {
       "recipename": "Vegan chilli, guacamole and rice",
       "desc": "Serves 2",
-      "picture": "images\chilli.png",
+      "picture": "images/chilli.png",
       "Ingredients": ["Chilli ingredients",
       "Chopped tomatoes¾ Onion",
       "Carrot",
@@ -67,7 +67,7 @@
     {
       "recipename": "Cajun chick pea burger with wedges",
       "desc": "Serves 2",
-      "picture": "images\burger.png",
+      "picture": "images/burger.png",
       "Ingredients": ["Garlic",
       "Onion",
       "Carrot",
@@ -88,7 +88,7 @@
     {
       "recipename": "Thai vegetable curry with noodles",
       "desc": "Serves 2",
-      "picture": "images\thaicurry.png",
+      "picture": "images/thaicurry.png",
       "Ingredients": ["2 – 4 cloves of garlic",
       "2 tbsp curry paste",
       "1 tsp ground ginger",
@@ -111,7 +111,7 @@
     {
       "recipename": "Vegan chilli, guac + pearl couscous",
       "desc": "Serves 2",
-      "picture": "images\couscous.png",
+      "picture": "images/couscous.png",
       "Ingredients":[ "Chilli ingredients",
       "Chopped tomatoes ",
       "¾ Onion Avocado",
@@ -139,7 +139,7 @@
     {
       "recipename": "Falafel burgers, guac and salad",
       "desc": "Serves 2",
-      "picture": "images\falafel.png",
+      "picture": "images/falafel.png",
       "Ingredients": ["Falafel mix",
       "2 rolls",
       "Avocado",
