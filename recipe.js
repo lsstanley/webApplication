@@ -9,7 +9,7 @@ var title=document.getElementById("title");
 var desc=document.getElementById("decription");
 let T=document.createElement('H1');
 let D=document.createElement('p');
-let img=document.getElementByClass("reciPic");
+let img=document.getElementById("reciPic");
 fetch("https://raw.githubusercontent.com/lsstanley/webApplication/jacks_dev/recipe.json")
   .then((resp)=>resp.json())
   .then(function(data){
