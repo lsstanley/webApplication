@@ -15,7 +15,7 @@ let img = document.getElementById("reciPic");
 let T = document.createElement('H1');
 let D = document.createElement('p');
 //fetch function asyncrinously takes information from the online json file
-fetch("https://raw.githubusercontent.com/lsstanley/webApplication/jacks_dev/recipe.json")
+fetch("https://raw.githubusercontent.com/lsstanley/webApplication/master/recipe.json")
   //turns the response from the fetch into a readable json file
   .then((resp) => resp.json())
   //function logs all the json data then stores json data into arrays that are specific for each variable in the json
