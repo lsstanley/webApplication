@@ -1,85 +1,115 @@
 <html>
-    <head>
-      <meta name="theme-color" content="#88d498">
 
-<style type="text/css">
-  html { height: 100% }
-  body { height: 100%; margin: 0; padding: 0 }
-  #map_canvas { height: 100% }
-</style>
-<script type="text/javascript"
-  src=
-"https://maps.googleapis.com/maps/api/js?key=AIzaSyC4Yinl8t5os1tyU8e2u7127MJh5ePxVlk&callback=initMap">
-</script>
-<script type="text/javascript">
+<head>
+  <meta name="theme-color" content="#88d498">
 
-var locations = [
-['Dundee Resource And reuse Centre',  56.462698,-2.985134 ],
-['The Health Store Dundee', 56.462355,-2.970028 ],
-['Tayside Re-Users',  56.462535,-2.985564 ],
-['Sense Scotland',  56.474699,-2.980316 ],
-['Little Green Larder',  56.4559,-2.9923 ],
-['Transform Furniture Store', 56.464812,-2.970830 ]
-];
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 
-  function initMap() {
+  <style type="text/css">
+    html {
+      height: 100%
+    }
 
-    var myOptions = {
-      center: new google.maps.LatLng(56.462002, -2.970700),
-      zoom: 13,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0
+    }
 
-    };
-    var map = new google.maps.Map(document.getElementById("default"),
+    #map_canvas {
+      height: 100%
+    }
+  </style>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4Yinl8t5os1tyU8e2u7127MJh5ePxVlk&callback=initMap">
+  </script>
+  <script type="text/javascript">
+    var locations = [
+      ['Dundee Resource And reuse Centre', 56.462698, -2.985134],
+      ['The Health Store Dundee', 56.462355, -2.970028],
+      ['Tayside Re-Users', 56.462535, -2.985564],
+      ['Sense Scotland', 56.474699, -2.980316],
+      ['Little Green Larder', 56.4559, -2.9923],
+      ['Transform Furniture Store', 56.464812, -2.970830]
+    ];
+
+    function initMap() {
+
+      var myOptions = {
+        center: new google.maps.LatLng(56.462002, -2.970700),
+        zoom: 13,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+
+      };
+      var map = new google.maps.Map(document.getElementById("default"),
         myOptions);
 
-    setMarkers(map,locations)
+      setMarkers(map, locations)
 
 
 
 
 
-  function setMarkers(map,locations){
+      function setMarkers(map, locations) {
 
-      var marker, i
+        var marker, i
 
-for (i = 0; i < locations.length; i++)
- {
+        for (i = 0; i < locations.length; i++) {
 
- var name = locations[i][0]
- var lat = locations[i][1]
- var long = locations[i][2]
-
-
- latlngset = new google.maps.LatLng(lat, long);
-
-  var marker = new google.maps.Marker({
-          map: map, title: name , position: latlngset
-        });
-        map.setCenter(marker.getPosition())
+          var name = locations[i][0]
+          var lat = locations[i][1]
+          var long = locations[i][2]
 
 
-        var content = name +  '</h3>'
+          latlngset = new google.maps.LatLng(lat, long);
 
-  var infowindow = new google.maps.InfoWindow()
-
-google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
-        return function() {
-           infowindow.setContent(content);
-           infowindow.open(map,marker);
-        };
-    })(marker,content,infowindow));
-
-  }
-  }
-
-}
+          var marker = new google.maps.Marker({
+            map: map,
+            title: name,
+            position: latlngset
+          });
+          map.setCenter(marker.getPosition())
 
 
+          var content = name + '</h3>'
 
+          var infowindow = new google.maps.InfoWindow()
+
+          google.maps.event.addListener(marker, 'click', (function(marker, content, infowindow) {
+            return function() {
+              infowindow.setContent(content);
+              infowindow.open(map, marker);
+            };
+          })(marker, content, infowindow));
+
+        }
+      }
+
+    }
   </script>
- </head>
- <body onload="initMap()">
-  <div id="default" style="width:100%; height:100%"></div>
- </body>
-  </html>
+</head>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="index.html">
+    <img src="./images/logo192.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    EcoLiving
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="charities.html">Charities</a>
+      <a class="nav-item nav-link disabled" href="map.html">Map</a>
+      <a class="nav-item nav-link" href="recipe.html">Recipes</a>
+    </div>
+  </div>
+</nav>
+
+<body onload="initMap()">
+  <div id="default" style="width:100%; height:94%"></div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
