@@ -11,6 +11,7 @@ var urlsToCache = [
   './images/logo512.png',
   './charities.html',
   './map.html',
+  './recipe.html',
   'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
 ];
 
