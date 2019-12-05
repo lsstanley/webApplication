@@ -1,7 +1,7 @@
 {
   "short_name": "EcoLiving",
   "name": "Eco-Living Web Application",
-  "start_url": "/?source=pwa",
+  "start_url": ".",
   "scope" : "./",
   "icons": [
           {
