@@ -2,18 +2,37 @@
 <html lang="en" dir="ltr">
 
 <head>
+  <!--meta tags-->
   <meta charset="utf-8">
-  <title>take 2</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Website title-->
+  <title>Recipes</title>
+  <!--links to css and the manifest -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="recipe.css">
+  <link rel="manifest" href="manifest.json">
+  <!--service worker script-->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
 </head>
 
 <body>
+  <!--Navigation Bar-->
   <nav class="navbar sticky-top navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="index.html">
-      <img src="https://picsum.photos/30/30" width="30" height="30" class="d-inline-block align-top" alt="">
+      <img src="./images/logo192.png" width="30" height="30" class="d-inline-block align-top" alt="">
       EcoLiving
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,11 +41,13 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="charities.html">Charities</a>
+        <a class="nav-item nav-link" href="map.html">Map</a>
+        <a class="nav-item nav-link" href="recipe.html">Recipes</a>
       </div>
     </div>
   </nav>
   <main>
-
+    <!--next and previous buttons-->
     <div class="container ">
       <div class="row buttons">
         <div class="col"></div>
@@ -37,7 +58,7 @@
       </div>
     </div>
     <div class="container">
-
+      <!--card with reicpe and image added through js-->
       <div class="container">
         <div class="container card">
           <div class="card-body">
@@ -49,6 +70,7 @@
         </div>
       </div>
     </div>
+    <!--ingredients and method buttons and list items added in js -->
     <div class="container ">
       <div class="row">
         <div class="col"></div>
@@ -62,6 +84,7 @@
       </div>
     </div>
   </main>
+  <!--required bootstrap scripts-->
   <script src="recipe.js" charset="utf-8"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
