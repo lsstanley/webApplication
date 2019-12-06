@@ -29,6 +29,10 @@ p{
   text-align: justify;
 
 }
+p.index {
+  padding: 5%,0%;
+  text-align: justify;
+}
 .infoImageMain{
   position: relative;
   max-width: auto;
@@ -51,4 +55,17 @@ p{
 ::-moz-selection{ /* selection for firefox*/
   color: white;
   background: #88d498;
+}
+button{
+  text-align: center
+}
+a .button{
+  margin:auto;
+}
+.cardSpacing{
+  /*this is mainly for the larger layouts where they need to be inline with the main photo*/
+  display: block;
+  margin:20px auto;
+  scale:auto;
+  max-width: 100%
 }
